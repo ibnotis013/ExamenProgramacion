@@ -25,7 +25,7 @@ public class Principal {
         refugio.admitirAnimal(gato3);
 
         refugio.hacerConcierto();
-
+        System.out.println(Refugio.buscarPorEspecie(perro1));
         System.out.println(Animal.calcularEdadHumana(perro1.getEdad()));
 
 
