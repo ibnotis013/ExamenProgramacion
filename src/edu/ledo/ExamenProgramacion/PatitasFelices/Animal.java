@@ -4,13 +4,16 @@ public class Animal {
     private String nombre;
     private int edad;
     private String chip;
+
     //final
     public Animal(String nombre, int edad, String chip) {
         this.nombre = nombre;
         this.edad = edad;
         this.chip = chip;
     }
-    public Animal() {}
+
+    public Animal() {
+    }
 
     public String getNombre() {
         return nombre;
@@ -44,6 +47,10 @@ public class Animal {
                 ", edad=" + edad +
                 ", chip='" + chip + '\'' +
                 '}';
+    }
+
+    public static int calcularEdadHumana(int edadAnimal) {
+        return edadAnimal = edadAnimal * 7;
     }
 
 }

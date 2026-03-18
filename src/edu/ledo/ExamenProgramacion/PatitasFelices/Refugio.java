@@ -1,10 +1,11 @@
 package edu.ledo.ExamenProgramacion.PatitasFelices;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Refugio {
-    private ArrayList<Animal> listaAnimales;
     private final int CAPACIDAD_MAXIMA = 5;
+    private static ArrayList<Animal> listaAnimales;
 
     public Refugio(ArrayList<Animal> listaAnimales) {
         this.listaAnimales = listaAnimales;
@@ -35,5 +36,16 @@ public class Refugio {
     }
 
 
-
+    public static ArrayList<Animal> buscarPorEspecie(Animal animalReferencia) {
+        ArrayList<Animal> animalEspecie = new ArrayList<Animal>();
+        for (Animal a : listaAnimales) {
+            if (animalReferencia instanceof Perro && a instanceof Perro) {
+                animalEspecie.add(a);
+            } else if (animalReferencia instanceof Gato && a instanceof Gato) {
+                animalEspecie.add(a);
+            }
+        }
+        return animalEspecie;
+        
+    }
 }
